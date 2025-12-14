@@ -1,0 +1,107 @@
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to top left, #8D0E17, #C71843, #FF9EB6);
+}
+
+/* Gradient Bars */
+.gradient-bar {
+    background: linear-gradient(to right, #F5B577, #FCF6AA);
+}
+
+.volunteer-bar {
+    background: linear-gradient(to right, #C71843, #E5485B);
+}
+
+.vision-bar {
+    background: linear-gradient(to right, #F9D889, #FCF6AA);
+}
+
+/* Project Image Placeholder */
+.project-image-placeholder {
+    background: linear-gradient(to bottom right, #F09173, #F9D889);
+    min-height: 300px;
+}
+
+@media (min-width: 768px) {
+    .project-image-placeholder {
+        min-height: 100%;
+    }
+}
+
+/* Volunteer CTA */
+.volunteer-cta {
+    background: linear-gradient(to bottom right, #8D0E17, #E5485B);
+}
+
+/* Vision Icons */
+.vision-icon-1 {
+    background: linear-gradient(to bottom right, #F5B577, #F9D889);
+}
+
+.vision-icon-2 {
+    background: linear-gradient(to bottom right, #EC6A6A, #F09173);
+}
+
+.vision-icon-3 {
+    background: linear-gradient(to bottom right, #E5485B, #EC6A6A);
+}
+
+/* Rendering Placeholder */
+.rendering-placeholder {
+    background: linear-gradient(to bottom right, #FCF6AA, #F9D889, #F5B577);
+}
+
+/* Footer */
+.footer-section {
+    background: linear-gradient(to bottom right, #8D0E17, #C71843, #E5485B);
+}
+
+/* Social Icons */
+.social-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Opportunity Cards */
+.opportunity-card:hover {
+    border-color: #F5B577;
+}
+
+.opportunity-card:hover .icon-circle {
+    transform: scale(1.1);
+}
+
+.icon-circle {
+    transition: transform 0.3s ease;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Aspect Ratio Utilities */
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 768px) {
+    .md\:aspect-auto {
+        aspect-ratio: auto;
+    }
+}
