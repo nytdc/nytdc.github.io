@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Leadership Opportunities - NYTDC</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      background-color: #1a1a1a;
+      color: #e5e5e5;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      padding: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo {
+      height: 3rem;
+      width: auto;
+    }
+
+    .header-text h1 {
+      color: white;
+    }
+
+    .header-text p {
+      color: #d1d5db;
+      font-size: 0.875rem;
+    }
+
+    .btn-signup {
+      background-color: #C71943;
+      color: white;
+      padding: 0.625rem 1.25rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    .btn-signup:hover {
+      background-color: #8D0E16;
+    }
+
+    .arrow-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+
+    /* Introduction */
+    .intro-section {
+      background-color: #252525;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      border-top: 4px solid #C71943;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-section h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .intro-section p {
+      color: #d1d5db;
+      margin-bottom: 1rem;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.75rem;
+      list-style: none;
+    }
+
+    .benefits-list li {
+      display: flex;
+      align-items: start;
+      gap: 0.5rem;
+      color: #d1d5db;
+    }
+
+    .checkmark {
+      margin-top: 0.25rem;
+      font-weight: bold;
+    }
+
+    /* Committees */
+    .committees-grid {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .committee-card {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      background-color: #252525;
+      border: 2px solid #333333;
+    }
+
+    .committee-header {
+      padding: 1.5rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .committee-icon {
+      font-size: 2.25rem;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    }
+
+    .committee-title {
+      flex: 1;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 2px rgba(0,0,0,0.3);
+    }
+
+    .committee-body {
+      padding: 1.5rem;
+    }
+
+    .committee-textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 0.75rem;
+      border: 2px solid;
+      border-radius: 0.5rem;
+      background-color: #1a1a1a;
+      color: #e5e5e5;
+      font-family: inherit;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      resize: none;
+    }
+
+    .committee-textarea:focus {
+      outline: none;
+      border-width: 2px;
+    }
+
+    .committee-textarea::placeholder {
+      color: #9ca3af;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 0.875rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background-color: white;
+        color: black;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      header {
+        position: relative;
+        box-shadow: none;
+      }
+
+      .committee-card {
+        break-inside: avoid;
+      }
+
+      .intro-section {
+        break-inside: avoid;
+      }
+
+      @page {
+        margin: 0.5in;
+        size: letter;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="header-left">
+          <img src="logo.png" alt="NYTDC Logo" class="logo">
+          <div class="header-text">
+            <h1>Volunteer Leadership Opportunities</h1>
+            <p>Join us in making a difference!</p>
+          </div>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoYFg0H7UdZCsh6F3mJp4EZsv6a_BvG5LmCKkMCW0_vuaOxg/viewform" target="_blank" rel="noopener noreferrer" class="btn-signup">
+          Sign Up Now
+          <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Introduction -->
+      <div class="intro-section">
+        <h2>Be a Leader. Be the Change.</h2>
+        <p>
+          We're looking for passionate volunteers to lead our committees! Each
+          committee plays a vital role in our organization's success and
+          community impact. As a committee leader, you'll have the opportunity to:
+        </p>
+        <ul class="benefits-list">
+          <li>
+            <span class="checkmark" style="color: #C71943;">✓</span>
+            <span>Build leadership and organizational skills</span>
+          </li>
+          <li>
+            <span class="checkmark" style="color: #F09273;">✓</span>
+            <span>Connect with like-minded individuals</span>
+          </li>
+          <li>
+            <span class="checkmark" style="color: #F5B577;">✓</span>
+            <span>Make a meaningful impact in your community</span>
+          </li>
+          <li>
+            <span class="checkmark" style="color: #F9D98A;">✓</span>
+            <span>Gain valuable experience for your career</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Committees -->
+      <div class="committees-grid">
+          <!-- Finance & Fundraising -->
+        <div class="committee-card">
+          <div class="committee-header" style="background-color: #49070C;">
+            <span class="committee-icon">💰</span>
+            <h2 class="committee-title">Finance & Fundraising Committee</h2>
+          </div>
+          <div class="committee-body">
+            <textarea 
+              class="committee-textarea" 
+              style="border-color: #49070C;"
+              placeholder="Enter committee description here..."
+            >This role is responsible for helping develop, manage, and monitor the organization’s annual budget to ensure financial stability and responsible use of resources. It ensures full compliance with financial policies, procedures, and regulations while maintaining accurate, transparent, and timely financial reporting. In addition, the role involves planning, coordinating, and executing fundraising events and campaigns to generate financial support. It also actively seeks and develops sponsorships, partnerships, and grant opportunities, building strong relationships with donors and stakeholders to support the organization’s mission and long-term goals.</textarea>
+          </div>
+        </div>
+
+        <div class="committee-card">
+          <div class="committee-header" style="background-color: #8D0E16;">
+            <span class="committee-icon">💼</span>
+            <h2 class="committee-title">Business & Marketing Committee</h2>
+          </div>
+          <div class="committee-body">
+            <textarea 
+              class="committee-textarea" 
+              style="border-color: #8D0E16;"
+              placeholder="Enter committee description here..."
+            >This role promotes the organization’s events and initiatives by managing social media accounts and creating engaging digital content that aligns with the organization’s brand. It oversees branding and public messaging to ensure consistency and professionalism across all platforms while handling external outreach to increase visibility and engagement. The role also supports other committees with their marketing needs and collaborates on promotional strategies. In addition, it involves creating and developing social networking events and fostering connections that lead to potential partnerships with external organizations and businesses.</textarea>
+          </div>
+        </div>
+
+
+        <!-- Cultural & Arts -->
+        <div class="committee-card">
+          <div class="committee-header" style="background-color: #C71943;">
+            <span class="committee-icon">🎨</span>
+            <h2 class="committee-title">Cultural & Arts Committee</h2>
+          </div>
+          <div class="committee-body">
+            <textarea 
+              class="committee-textarea" 
+              style="border-color: #C71943;"
+              placeholder="Enter committee description here..."
+            >This role focuses on promoting and preserving cultural heritage and artistic expression within the community. It involves organizing cultural programs, performances, and exhibitions, as well as hosting workshops and events that showcase community arts. The role collaborates closely with local artists, performers, cultural groups, and nonprofit organizations to create meaningful cultural experiences. Additionally, it encourages active community involvement by using arts and culture as a way to build connections, celebrate diversity, and strengthen community engagement.</textarea>
+          </div>
+        </div>
+
+        <!-- Community Service & Welfare -->
+        <div class="committee-card">
+          <div class="committee-header" style="background-color: #F09273;">
+            <span class="committee-icon">🤝</span>
+            <h2 class="committee-title">Community Service & Welfare Committee</h2>
+          </div>
+          <div class="committee-body">
+            <textarea 
+              class="committee-textarea" 
+              style="border-color: #F09273;"
+              placeholder="Enter committee description here..."
+            >This role focuses on identifying and addressing community needs through meaningful service and outreach initiatives. It involves planning and coordinating volunteer activities and service projects, including organizing programs such as food drives, health fairs, and community outreach events. The role is dedicated to supporting vulnerable and underserved community members while promoting equity, inclusion, and overall community well-being through collaborative and impactful efforts.</textarea>
+          </div>
+        </div>
+
+        <!-- Sports -->
+        <div class="committee-card">
+          <div class="committee-header" style="background-color: #F5B577;">
+            <span class="committee-icon">⚽</span>
+            <h2 class="committee-title">Sports Committee</h2>
+          </div>
+          <div class="committee-body">
+            <textarea 
+              class="committee-textarea" 
+              style="border-color: #F5B577;"
+              placeholder="Enter committee description here..."
+            >This role is responsible for organizing sports leagues, tournaments, and fitness events that encourage active participation and healthy lifestyles. It coordinates recreational activities designed for all age groups and works closely with coaches, trainers, and local facilities to ensure well-run programs. The role also promotes inclusivity and community engagement by using sports and recreation as a way to bring people together and strengthen community connections.</textarea>
+          </div>
+        </div>
+
+        <!-- Youth & Education -->
+        <div class="committee-card">
+          <div class="committee-header" style="background-color: #F9D98A;">
+            <span class="committee-icon">📚</span>
+            <h2 class="committee-title">Youth & Education Committee</h2>
+          </div>
+          <div class="committee-body">
+            <textarea 
+              class="committee-textarea" 
+              style="border-color: #F9D98A;"
+              placeholder="Enter committee description here..."
+            >This role supports the academic and personal development of youth by organizing tutoring, mentorship, and leadership programs that foster growth and confidence. It involves developing a Tamil language education program for learners of all ages while planning youth-focused events and workshops that encourage skill-building and engagement. The role collaborates with schools, parents, and community groups to create supportive learning environments and promotes educational success, cultural pride, and future achievement among young people.</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Thank you for your interest in volunteering with us!</p>
+      <p>Together, we can make a lasting impact in our community.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Add focus border color matching functionality
+    document.querySelectorAll('.committee-textarea').forEach(textarea => {
+      const borderColor = textarea.style.borderColor;
+      
+      textarea.addEventListener('focus', function() {
+        this.style.borderColor = borderColor;
+      });
+      
+      textarea.addEventListener('blur', function() {
+        this.style.borderColor = borderColor;
+      });
+    });
+  </script>
+</body>
+</html>
