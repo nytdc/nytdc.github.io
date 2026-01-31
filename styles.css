@@ -1057,7 +1057,7 @@ body {
     outline-offset: 2px;
 }
 
-/* Print Styles */
+/* Print Style */
 @media print {
     .header,
     .nav-toggle,
