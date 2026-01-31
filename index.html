@@ -3,102 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYTDC - Uniting Tamils in NYC Through Culture, Education, and Community</title>
+    <title>New York Tamil Development Council | NYTDC</title>
+    <meta name="description" content="NYTDC is a nonprofit organization dedicated to building a Tamil community center and uniting Tamil people in Staten Island and New York.">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-white">
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-logo">
+                    <img src="logo.png" alt="NYTDC Logo" class="logo-image">
+                    <!-- <span class="logo-text">NYTDC</span> -->
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#about" data-en="About" data-ta="பற்றி">About</a></li>
+                        <li><a href="#mission" data-en="Mission" data-ta="நோக்கம்">Mission</a></li>
+                        <li><a href="#events" data-en="Events" data-ta="நிகழ்வுகள்">Events</a></li>
+                        <li><a href="#get-involved" data-en="Get Involved" data-ta="பங்கேற்க">Get Involved</a></li>
+                        <li><a href="#resources" data-en="Resources" data-ta="வளங்கள்">Resources</a></li>
+                        <li><a href="#donate" data-en="Donate" data-ta="நன்கொடை">Donate</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="#membership" class="btn btn-primary" data-en="Become a Member" data-ta="உறுப்பினராகுங்கள்">Become a Member</a>
+                        <div class="lang-toggle" role="radiogroup" aria-label="Language selection">
+                            <button class="lang-btn active" data-lang="en" role="radio" aria-checked="true">English</button>
+                            <span class="lang-separator">|</span>
+                            <button class="lang-btn" data-lang="ta" role="radio" aria-checked="false">தமிழ்</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
-    <section class="hero-section relative overflow-hidden py-16 px-4 sm:py-24 md:py-32">
-        <div class="hero-pattern absolute inset-0 opacity-30"></div>
-        
-        <div class="relative max-w-6xl mx-auto text-center">
-            <div class="mb-8 sm:mb-12">
-                <img 
-                    src="logo.png" 
-                    alt="NYTDC Logo" 
-                    class="h-16 sm:h-24 md:h-32 mx-auto"
-                    id="logo"
-                />
-            </div>
-            
-            <div class="max-w-3xl mx-auto space-y-6">
-                <h1 class="text-white px-4 text-3xl sm:text-4xl md:text-5xl font-medium leading-tight">
-                    Uniting Tamils in NYC Through Culture, Education, and Community
-                </h1>
-                <p class="text-white text-lg sm:text-xl md:text-2xl leading-relaxed px-4" style="opacity: 0.9;">
-                    At NYTDC, we are dedicated to building a Tamil community center in Staten Island. A welcoming hub for learning, cultural programs, and community connection. Through educational initiatives, mentorship, and outreach, we empower individuals and families while strengthening the bonds that make our community thrive.
-                </p>
-                <div class="pt-4">
-                    <a 
-                        href="#volunteer" 
-                        class="inline-block bg-white px-8 py-3 rounded-full transition-all hover:scale-105 hover:shadow-xl text-base font-medium"
-                        style="color: #8D0E17;"
-                    >
-                        Get Involved
-                    </a>
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="hero-image.png" alt="Community center vision" class="hero-image">
+                <h1 class="hero-title" data-en="Building Community, Celebrating Heritage" data-ta="சமூகத்தை உருவாக்குதல், பாரம்பரியத்தை கொண்டாடுதல்">Building Community, Celebrating Heritage</h1>
+                <p class="hero-subtitle" data-en="The New York Tamil Development Council unites Tamil people across New York through service, education, cultural arts, and sports." data-ta="நியூயார்க் தமிழ் மேம்பாட்டு சபை சேவை, கல்வி, கலாச்சார கலைகள் மற்றும் விளையாட்டு மூலம் நியூயார்க் முழுவதும் தமிழ் மக்களை ஒன்றிணைக்கிறது.">The New York Tamil Development Council unites Tamil people across New York through service, education, cultural arts, and sports.</p>
+                <div class="hero-ctas">
+                    <a href="#membership" class="btn btn-hero-primary" data-en="Become a Member" data-ta="உறுப்பினராகுங்கள்">Become a Member</a>
+                    <a href="#donate" class="btn btn-hero-secondary" data-en="Donate Now" data-ta="இப்போது நன்கொடை">Donate Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Latest Project Section -->
-    <section class="py-16 px-4 sm:py-20 md:py-24 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="mb-4 text-2xl sm:text-3xl md:text-4xl font-medium" style="color: #8D0E17;">
-                    Latest Project
-                </h2>
-                <div class="w-20 h-1 mx-auto gradient-bar"></div>
+    <!-- About Section -->
+    <section class="section section-about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About NYTDC" data-ta="NYTDC பற்றி">About NYTDC</h2>
+            <div class="about-content">
+                <p class="about-text" data-en="The New York Tamil Development Council (NYTDC) is a nonprofit, community-based organization dedicated to building a Tamil community center and uniting Tamil people in Staten Island and across New York through service, education, cultural arts, and sports." data-ta="நியூயார்க் தமிழ் மேம்பாட்டு சபை (NYTDC) ஒரு இலாப நோக்கமற்ற, சமூக அடிப்படையிலான அமைப்பாகும், இது ஒரு தமிழ் சமூக மையத்தை உருவாக்குவதற்கும், ஸ்டேட்டன் தீவு மற்றும் நியூயார்க் முழுவதும் உள்ள தமிழ் மக்களை சேவை, கல்வி, கலாச்சார கலைகள் மற்றும் விளையாட்டு மூலம் ஒன்றிணைப்பதற்கும் அர்பணிக்கப்பட்டுள்ளது.">The New York Tamil Development Council (NYTDC) is a nonprofit, community-based organization dedicated to building a Tamil community center and uniting Tamil people in Staten Island and across New York through service, education, cultural arts, and sports.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="grid md:grid-cols-2 gap-0">
-                    <div class="aspect-video md:aspect-auto relative overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="text-center p-8" style="color: rgba(255,255,255,0.3);">
-                                <img src="nytdc-project.jpg" alt="Project Image" class="w-full h-full object-cover">
-                            </div>
-                        </div>
+    <!-- Mission Section -->
+    <section class="section section-mission" id="mission">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Mission" data-ta="எங்கள் நோக்கம்">Our Mission</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">🤝</div>
+                    <h3 class="mission-card-title" data-en="Unite the Community" data-ta="சமூகத்தை ஒன்றிணைக்க">Unite the Community</h3>
+                    <p class="mission-card-text" data-en="Unite all Tamils in Staten Island and surrounding areas" data-ta="ஸ்டேட்டன் தீவு மற்றும் சுற்றியுள்ள பகுதிகளில் உள்ள அனைத்து தமிழர்களையும் ஒன்றிணைக்க">Unite all Tamils in Staten Island and surrounding areas</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🎉</div>
+                    <h3 class="mission-card-title" data-en="Cultural & Sports Events" data-ta="கலாச்சார மற்றும் விளையாட்டு நிகழ்வுகள்">Cultural & Sports Events</h3>
+                    <p class="mission-card-text" data-en="Develop cultural and sporting events" data-ta="கலாச்சார மற்றும் விளையாட்டு நிகழ்வுகளை உருவாக்க">Develop cultural and sporting events</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">📚</div>
+                    <h3 class="mission-card-title" data-en="Heritage & Education" data-ta="பாரம்பரியம் & கல்வி">Heritage & Education</h3>
+                    <p class="mission-card-text" data-en="Support Tamil heritage, language education, and classical performing arts" data-ta="தமிழ் பாரம்பரியம், மொழி கல்வி மற்றும் பாரம்பரிய கலைகளை ஆதரிக்க">Support Tamil heritage, language education, and classical performing arts</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">❤️</div>
+                    <h3 class="mission-card-title" data-en="Social Service" data-ta="சமூக சேவை">Social Service</h3>
+                    <p class="mission-card-text" data-en="Engage in charitable activities and social service initiatives" data-ta="தொண்டு நடவடிக்கைகள் மற்றும் சமூக சேவை முயற்சிகளில் ஈடுபட">Engage in charitable activities and social service initiatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section class="section section-donate" id="donate">
+        <div class="container">
+            <h2 class="section-title" data-en="Donate" data-ta="நன்கொடை">Donate</h2>
+            <div class="donate-content">
+                <div class="donate-qr">
+                    <div class="qr-placeholder">
+                        <img src="qr.jpeg" alt="QR code to donate" width="200">
                     </div>
-                    
-                    <div class="p-8 sm:p-10 md:p-12">
-                        <h3 class="mb-6 text-xl sm:text-2xl font-medium" style="color: #C71843;">
-                            Soup Kitchen Community Initiative
-                        </h3>
-                        
-                        <div class="space-y-4 mb-6">
-                            <div class="flex items-start gap-3">
-                                <svg class="flex-shrink-0 mt-1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5B577" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
-                                <div>
-                                    <p class="text-gray-700">
-                                        NYTDC committee members, supporters, and community volunteers partnered with Feeding With TLC, Inc. at Trinity Lutheran Church in Staten Island, volunteering from 10 AM to 1 PM at the church’s soup kitchen. Together, we helped prepare and serve hot, nutritious meals to neighbors in need and donated clothing to anyone who visited that day. The experience created a welcoming and inclusive space where people of all ages, backgrounds, and incomes felt supported, cared for, and connected. It was a meaningful and truly rewarding opportunity to give back and strengthen our Staten Island community.
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center gap-3">
-                                <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5B577" stroke-width="2">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                    <line x1="16" y1="2" x2="16" y2="6"/>
-                                    <line x1="8" y1="2" x2="8" y2="6"/>
-                                    <line x1="3" y1="10" x2="21" y2="10"/>
-                                </svg>
-                                <p class="text-gray-700">November 2025</p>
-                            </div>
-                            
-                            <div class="flex items-center gap-3">
-                                <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5B577" stroke-width="2">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                </svg>
-                                <p class="text-gray-700">10 community members involved</p>
-                            </div>
+                    <p class="qr-label" data-en="Scan to donate via Zelle" data-ta="Zelle மூலம் நன்கொடை அளிக்க ஸ்கேன் செய்யவும்">Scan to donate via Zelle</p>
+                </div>
+                <div class="donate-info">
+                    <h3 class="donate-info-title" data-en="How Your Support Helps Us:" data-ta="உங்கள் ஆதரவு எங்களுக்கு எப்படி உதவுகிறது:">How Your Support Helps Us:</h3>
+                    <ul class="donate-list">
+                        <li data-en="Organize health fairs, food drives, and youth programs" data-ta="சுகாதார கண்காட்சிகள், உணவு வழங்கல் மற்றும் இளைஞர் திட்டங்களை ஏற்பாடு செய்ய">Organize health fairs, food drives, and youth programs</li>
+                        <li data-en="Support Tamil cultural arts and education" data-ta="தமிழ் கலாச்சார கலைகள் மற்றும் கல்வியை ஆதரிக்க">Support Tamil cultural arts and education</li>
+                        <li data-en="Develop cultural, professional, and sporting events" data-ta="கலாச்சார, தொழில்முறை மற்றும் விளையாட்டு நிகழ்வுகளை உருவாக்க">Develop cultural, professional, and sporting events</li>
+                        <li data-en="Build toward our future Tamil Community Center in Staten Island" data-ta="ஸ்டேட்டன் தீவில் எங்கள் எதிர்கால தமிழ் சமூக மையத்தை உருவாக்க">Build toward our future Tamil Community Center in Staten Island</li>
+                    </ul>
+                    <a href="#donate" class="btn btn-primary" data-en="Donate Now" data-ta="இப்போது நன்கொடை">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="section section-membership" id="membership">
+        <div class="container">
+            <h2 class="section-title" data-en="Membership" data-ta="உறுப்பினர்">Membership</h2>
+            <div class="membership-content">
+                <p class="membership-text" data-en="NYTDC is sustained through membership dues, community donations, and fundraising events. Join us today to support our mission and connect with the Tamil community." data-ta="NYTDC உறுப்பினர் கட்டணம், சமூக நன்கொடைகள் மற்றும் நிதி திரட்டும் நிகழ்வுகள் மூலம் நிலைத்திருக்கிறது. எங்கள் நோக்கத்தை ஆதரிக்கவும் தமிழ் சமூகத்துடன் இணைக்கவும் இன்றே எங்களுடன் சேருங்கள்.">NYTDC is sustained through membership dues, community donations, and fundraising events. Join us today to support our mission and connect with the Tamil community.</p>
+                <div class="membership-form">
+                    <iframe src="https://docs.google.com/forms/d/120w-gS8r3OeXrGlC83yjOhy7TuLmz72ISQFoa1S-Lqs/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" title="NYTDC Membership Form" aria-label="NYTDC Membership Application Form">
+                        <span data-en="Loading membership form..." data-ta="உறுப்பினர் படிவம் ஏற்றப்படுகிறது...">Loading membership form...</span>
+                    </iframe>
+                    <p class="form-note" data-en="Please complete the form above to become a member. If the form doesn't load, please contact us directly." data-ta="உறுப்பினராக படிவத்தை நிரப்பவும். படிவம் ஏற்றப்படவில்லை என்றால், நேரடியாக எங்களை தொடர்பு கொள்ளவும்.">Please complete the form above to become a member. If the form doesn't load, please contact us directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section section-events" id="events">
+        <div class="container">
+            <h2 class="section-title" data-en="Our First Public Forum" data-ta="எங்கள் முதல் பொது கூட்டம்">Our First Public Forum</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">31</span>
+                        <span class="event-month" data-en="January" data-ta="ஜனவரி">Jan</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title" data-en="NYTDC Community Forum" data-ta="NYTDC சமூக மன்றம்">NYTDC Community Forum</h3>
+                        <p class="event-description" data-en="Join us for our first public forum where we'll discuss our vision for the Tamil Community Center, upcoming events, and how you can get involved. All are welcome!" data-ta="தமிழ் சமூக மையத்திற்கான எங்கள் தொலைநோக்கு, வரவிருக்கும் நிகழ்வுகள் மற்றும் நீங்கள் எவ்வாறு பங்கேற்கலாம் என்பதை விவாதிக்க எங்கள் முதல் பொது கூட்டத்திற்கு வாருங்கள். அனைவரும் வரவேற்கப்படுகிறார்கள்!">Join us for our first public forum where we'll discuss our vision for the Tamil Community Center, upcoming events, and how you can get involved. All are welcome!</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Trinity Lutheran Church, Staten Island, NY</span>
+                            <span class="event-time">⏰ 2:30 PM - 5:30 PM</span>
                         </div>
                     </div>
                 </div>
@@ -106,281 +165,108 @@
         </div>
     </section>
 
-    <!-- Volunteer Section -->
-    <section id="volunteer" class="py-16 px-4 sm:py-20 md:py-24 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="mb-4 text-2xl sm:text-3xl md:text-4xl font-medium" style="color: #8D0E17;">
-                    Volunteer With Us
-                </h2>
-                <div class="w-20 h-1 mx-auto volunteer-bar mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                    Make a real difference in your community. Whether you have an hour a week or a day a month, 
-                    there's a place for you in our mission.
-                </p>
+    <!-- Get Involved / Volunteer Section -->
+    <section class="section section-volunteer" id="get-involved">
+        <div class="container">
+            <h2 class="section-title" data-en="Volunteer With Us" data-ta="எங்களுடன் தொண்டு செய்யுங்கள்">Volunteer With Us</h2>
+            <div class="volunteer-content">
+                <p class="volunteer-text" data-en="We're always looking for passionate individuals to help us build a stronger Tamil community. Whether you can help with events, education programs, or community outreach, there's a place for you at NYTDC." data-ta="வலுவான தமிழ் சமூகத்தை உருவாக்க எங்களுக்கு உதவ ஆர்வமுள்ள நபர்களை நாங்கள் எப்போதும் தேடுகிறோம். நிகழ்வுகள், கல்வி திட்டங்கள் அல்லது சமூக விரிவாக்கத்தில் உங்களால் உதவ முடிந்தால், NYTDC இல் உங்களுக்கு ஒரு இடம் உள்ளது.">We're always looking for passionate individuals to help us build a stronger Tamil community. Whether you can help with events, education programs, or community outreach, there's a place for you at NYTDC.</p>
+                <div class="volunteer-areas">
+                    <div class="volunteer-area">
+                        <h4 data-en="Event Planning" data-ta="நிகழ்வு திட்டமிடல்">Event Planning</h4>
+                        <p data-en="Help organize cultural festivals, health fairs, and community gatherings" data-ta="கலாச்சார திருவிழாக்கள், சுகாதார கண்காட்சிகள் மற்றும் சமூக கூட்டங்களை ஏற்பாடு செய்ய உதவுங்கள்">Help organize cultural festivals, health fairs, and community gatherings</p>
+                    </div>
+                    <div class="volunteer-area">
+                        <h4 data-en="Education & Arts" data-ta="கல்வி மற்றும் கலைகள்">Education & Arts</h4>
+                        <p data-en="Support Tamil language classes and classical performing arts programs" data-ta="தமிழ் மொழி வகுப்புகள் மற்றும் பாரம்பரிய கலை திட்டங்களை ஆதரிக்கவும்">Support Tamil language classes and classical performing arts programs</p>
+                    </div>
+                    <div class="volunteer-area">
+                        <h4 data-en="Community Outreach" data-ta="சமூக விரிவாக்கம்">Community Outreach</h4>
+                        <p data-en="Connect with Tamil families and help grow our network across New York" data-ta="தமிழ் குடும்பங்களுடன் இணைந்து நியூயார்க் முழுவதும் எங்கள் வலையமைப்பை வளர உதவுங்கள்">Connect with Tamil families and help grow our network across New York</p>
+                    </div>
+                </div>
+                <a href="https://docs.google.com/forms/d/1HRLhydGGj_WWrBPImJDC9gsDjFWU0cbE5LxVUhdUXqc" class="btn btn-primary" data-en="Sign Up to Volunteer" data-ta="தொண்டு செய்ய பதிவு செய்யவும்">Sign Up to Volunteer</a>
             </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <!-- Build & Create -->
-                <div class="opportunity-card bg-white border-2 border-gray-100 rounded-xl p-6 hover:shadow-lg transition-all">
-                    <div class="icon-circle w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background-color: rgba(229, 72, 91, 0.2);">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E5485B" stroke-width="2">
-                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-gray-900 mb-3 text-lg font-medium">
-                        Build & Create
-                    </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Help build and lead a committee in business, partnerships, social media, and other areas.
-                    </p>
-                </div>
-
-                <!-- Community Support -->
-                <div class="opportunity-card bg-white border-2 border-gray-100 rounded-xl p-6 hover:shadow-lg transition-all">
-                    <div class="icon-circle w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background-color: rgba(236, 106, 106, 0.2);">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EC6A6A" stroke-width="2">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-gray-900 mb-3 text-lg font-medium">
-                        Community Support
-                    </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Connect with community members, organize events, and spread awareness about our mission.
-                    </p>
-                </div>
-
-                <!-- Education & Mentoring -->
-                <div class="opportunity-card bg-white border-2 border-gray-100 rounded-xl p-6 hover:shadow-lg transition-all">
-                    <div class="icon-circle w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background-color: rgba(240, 145, 115, 0.2);">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F09173" stroke-width="2">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-gray-900 mb-3 text-lg font-medium">
-                        Education & Mentoring
-                    </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Share your skills and knowledge through workshops and one-on-one mentoring programs.
-                    </p>
-                </div>
-
-                <!-- Event Planning -->
-                <div class="opportunity-card bg-white border-2 border-gray-100 rounded-xl p-6 hover:shadow-lg transition-all">
-                    <div class="icon-circle w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background-color: rgba(245, 181, 119, 0.2);">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5B577" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                            <path d="M8 14h.01"/>
-                            <path d="M12 14h.01"/>
-                            <path d="M16 14h.01"/>
-                            <path d="M8 18h.01"/>
-                            <path d="M12 18h.01"/>
-                            <path d="M16 18h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-gray-900 mb-3 text-lg font-medium">
-                        Event Planning
-                    </h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Help organize fundraisers, community gatherings, and awareness campaigns.
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="volunteer-cta rounded-2xl p-8 sm:p-10 md:p-12 text-center text-white">
-        <h3 class="mb-4 text-xl sm:text-2xl font-medium">
-            Ready to Make an Impact?
-        </h3>
-
-        <p class="mb-8 max-w-2xl mx-auto" style="color: rgba(255,255,255,0.9);">
-            Join our community of dedicated volunteers and help us build a brighter future together.
-        </p>
-
-        <!-- Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            
-            <!-- More Info (secondary) -->
-            <a href="https://nytdc.github.io/leadership.html">
-                <button
-                    class="px-8 py-3 rounded-full border border-white/70 text-white hover:bg-white/10 transition-all text-base font-medium">
-                    Learn More
-                </button>
-            </a>
-
-            <!-- Sign Up (primary) -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoYFg0H7UdZCsh6F3mJp4EZsv6a_BvG5LmCKkMCW0_vuaOxg/viewform?usp=header"
-               target="_blank" rel="noopener noreferrer">
-                <button
-                    class="bg-white px-8 py-3 rounded-full hover:scale-105 transition-transform text-base font-medium"
-                    style="color: #8D0E17;">
-                    Sign Up to Volunteer
-                </button>
-            </a>
-
         </div>
-    </div>
-
     </section>
 
-    <!-- Community Vision Section -->
-    <section class="py-16 px-4 sm:py-20 md:py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="mb-4 text-2xl sm:text-3xl md:text-4xl font-medium" style="color: #8D0E17;">
-                    Our Vision for the Future
-                </h2>
-                <div class="w-20 h-1 mx-auto vision-bar mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                    We're building more than structures we're creating spaces where community thrives.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full vision-icon-1 flex items-center justify-center">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-                                <path d="M5 3v4"/>
-                                <path d="M19 17v4"/>
-                                <path d="M3 5h4"/>
-                                <path d="M17 19h4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="mb-2 text-lg font-medium" style="color: #C71843;">
-                                Multipurpose Community Center
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                A welcoming hub featuring flexible meeting spaces, educational facilities, 
-                                and recreational areas designed to bring people together.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full vision-icon-2 flex items-center justify-center">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-                                <path d="M5 3v4"/>
-                                <path d="M19 17v4"/>
-                                <path d="M3 5h4"/>
-                                <path d="M17 19h4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="mb-2 text-lg font-medium" style="color: #C71843;">
-                                Green Outdoor Spaces
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Sustainable gardens, play areas for children, and peaceful gathering spots 
-                                that connect the community with nature.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full vision-icon-3 flex items-center justify-center">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-                                <path d="M5 3v4"/>
-                                <path d="M19 17v4"/>
-                                <path d="M3 5h4"/>
-                                <path d="M17 19h4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="mb-2 text-lg font-medium" style="color: #C71843;">
-                                Accessible for All
-                            </h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Universal design principles ensuring everyone, regardless of ability, 
-                                can fully participate in community life.
-                            </p>
-                        </div>
+    <!-- Resources Section -->
+    <section class="section section-resources" id="resources">
+        <div class="container">
+            <h2 class="section-title" data-en="Resources" data-ta="வளங்கள்">Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📄</div>
+                    <h3 class="resource-title" data-en="NYTDC Constitution" data-ta="NYTDC அரசியலமைப்பு">NYTDC Constitution</h3>
+                    <p class="resource-description" data-en="Our founding document outlining the organization's structure and principles" data-ta="அமைப்பின் அமைப்பு மற்றும் கொள்கைகளை விவரிக்கும் எங்கள் அடிப்படை ஆவணம்">Our founding document outlining the organization's structure and principles</p>
+                    <div class="resource-actions">
+                        <!-- <a href="#" class="btn btn-secondary btn-small" data-en="Preview" data-ta="முன்னோட்டம்">Preview</a> -->
+                        <a href="Constitution.pdf" class="btn btn-primary btn-small" download data-en="Download PDF" data-ta="PDF பதிவிறக்கம்">Download PDF</a>
                     </div>
                 </div>
-
-            <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl relative">
-                <img 
-                    src="nytdc-center.jpg"
-                    alt="Proposed community center rendering"
-                    class="absolute inset-0 w-full h-full object-cover"
-                />
-
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="text-center p-8 relative z-10">
+                <div class="resource-card">
+                    <div class="resource-icon">📋</div>
+                    <h3 class="resource-title" data-en="Official Bylaws" data-ta="அதிகாரப்பூர்வ விதிகள்">Official Bylaws</h3>
+                    <p class="resource-description" data-en="Detailed governance rules and operational procedures" data-ta="விரிவான ஆட்சி விதிகள் மற்றும் செயல்பாட்டு நடைமுறைகள்">Detailed governance rules and operational procedures</p>
+                    <div class="resource-actions">
+                        <!-- <a href="BYLAWS.pdf" class="btn btn-secondary btn-small" data-en="Preview" data-ta="முன்னோட்டம்">Preview</a> -->
+                        <a href="BYLAWS.pdf" class="btn btn-primary btn-small" download data-en="Download PDF" data-ta="PDF பதிவிறக்கம்">Download PDF</a>
                     </div>
                 </div>
-            </div>
-
+                <div class="resource-card">
+                    <div class="resource-icon">📖</div>
+                    <h3 class="resource-title" data-en="NYTDC Brochure" data-ta="NYTDC விளம்பரப் பிரசுரம்">NYTDC Brochure</h3>
+                    <p class="resource-description" data-en="Learn more about our programs, events, and how to get involved" data-ta="எங்கள் திட்டங்கள், நிகழ்வுகள் மற்றும் எவ்வாறு பங்கேற்பது என்பதை மேலும் அறியவும்">Learn more about our programs, events, and how to get involved</p>
+                    <div class="resource-actions">
+                        <!-- <a href="#" class="btn btn-secondary btn-small" data-en="Preview" data-ta="முன்னோட்டம்">Preview</a> -->
+                        <a href="brochure.pdf" class="btn btn-primary btn-small" download data-en="Download PDF" data-ta="PDF பதிவிறக்கம்">Download PDF</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-section text-white py-12 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div class="text-center md:text-left">
-                    <img 
-                        src="logo.png" 
-                        alt="NYTDC Logo" 
-                        class="h-12 mx-auto md:mx-0 mb-4"
-                        id="logo-footer"
-                    />
-                    <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.8);">
-                        Uniting Tamils in NYC Through Culture, Education, and Community.
-                    </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <!-- <span class="footer-logo">NYTDC</span> -->
+                    <img src="logo.png" alt="NYTDC Logo" class="footer-logo-image">
+                    <p class="footer-mission" data-en="Uniting Tamils in NYC Through Culture, Education, and Community." data-ta="பண்பாடு, கல்வி, சமூக ஒற்றுமை மூலம் நியூயார்க் நகரத் தமிழர்களை ஒன்றிணைப்பது">Uniting Tamils in NYC Through Culture, Education, and Community.</p>
                 </div>
-
-                <div class="text-center">
-                    <h3 class="mb-4 text-lg font-medium">
-                        Contact Us
-                    </h3>
-                    <p class="text-sm mb-2" style="color: rgba(255,255,255,0.8);">
-                        Email: tamildevelopmentcouncil (at) gmail (dot) com
-                    </p>
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-ta="விரைவு இணைப்புகள்">Quick Links</h4>
+                    <ul>
+                        <li><a href="#about" data-en="About" data-ta="பற்றி">About</a></li>
+                        <li><a href="#mission" data-en="Mission" data-ta="நோக்கம்">Mission</a></li>
+                        <li><a href="#events" data-en="Events" data-ta="நிகழ்வுகள்">Events</a></li>
+                        <li><a href="#get-involved" data-en="Get Involved" data-ta="பங்கேற்க">Get Involved</a></li>
+                        <li><a href="#resources" data-en="Resources" data-ta="வளங்கள்">Resources</a></li>
+                    </ul>
                 </div>
-
-                <div class="text-center md:text-right">
-                    <h3 class="mb-4 text-lg font-medium">
-                        Connect With Us
-                    </h3>
-                    <div class="flex gap-4 justify-center md:justify-end">
-                        <a href="https://facebook.com/nytdcofficial" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full flex items-center justify-center transition-all" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                <div class="footer-contact">
+                    <h4 data-en="Contact Us" data-ta="எங்களை தொடர்பு கொள்ளவும்">Contact Us</h4>
+                    <p class="footer-email">
+                        <a href="mailto:tamildevelopmentcouncil&#64;gmail&#46;com">tamildevelopmentcouncil&#64;gmail&#46;com</a>
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/nytdcofficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/company/nytdc/" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full flex items-center justify-center transition-all" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                <rect x="2" y="9" width="4" height="12"/>
-                                <circle cx="4" cy="4" r="2"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/nytdcofficial" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-full flex items-center justify-center transition-all" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        <a href="https://www.facebook.com/nytdcofficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                         </a>
                     </div>
                 </div>
             </div>
-
-            <div class="border-t pt-8 text-center" style="border-color: rgba(255,255,255,0.2);">
-                <p class="text-sm" style="color: rgba(255,255,255,0.6);">
-                    © <span id="year"></span> New York Tamil Development Council. All rights reserved. | A 501(c)(3) nonprofit organization
-                </p>
+            <div class="footer-bottom">
+                <p data-en="NYTDC is a registered 501(c)(3) nonprofit organization" data-ta="NYTDC ஒரு பதிவு செய்யப்பட்ட 501(c)(3) இலாப நோக்கமற்ற அமைப்பாகும்">NYTDC is a registered 501(c)(3) nonprofit organization</p>
+                <p class="footer-copyright">&copy; 2025 New York Tamil Development Council. All rights reserved.</p>
             </div>
         </div>
     </footer>
